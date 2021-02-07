@@ -23,5 +23,6 @@ function createPokemon(pokemon, num) {
   pimage.setAttribute("src", pokemon.sprites.front_default);
 
   let pnum = item.getElementsByTagName("p")[0];
-  pnum.textContent = pokemon.name;
+  pnum.innerHTML = `<h1>Name: ${pokemon.name}</h1> <h2> ID: #${pokemon.id}</h2> <h3> Type: ${pokemon.types[0].type.name} ${pokemon.types[1]? ", "+pokemon.types[1].type.name : " "}<\h3>`;
+  console.log(pokemon.types[0].type.name);
 }
